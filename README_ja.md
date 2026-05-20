@@ -228,15 +228,15 @@ RynnBrain の認知、ローカライゼーション、推論、計画の能力�
 
 | カテゴリ | Cookbook 名 | 説明 |
 |----------------------|--------------------------------------------------------------------------------------------------|-------------|
-| 認知 | [1_spatial_understanding.ipynb](./cookbooks/1_spatial_understanding.ipynb) | 動画シーンにおける空間理解能力を示します。 |
-| 認知 | [2_object_understanding.ipynb](./cookbooks/2_object_understanding.ipynb) | 物体カテゴリ、属性、関係、カウント能力をモデルがどのように理解するかを示します。 |
-| 認知 | [3_ocr.ipynb](./cookbooks/3_ocr.ipynb) | 動画内の光学文字認識とテキスト理解の例です。 |
-| ローカライゼーション | [4_object_location.ipynb](./cookbooks/4_object_location.ipynb) | 指示に基づき、画像または動画内の特定物体をバウンディングボックスで特定します。 |
-| ローカライゼーション | [5_area_location.ipynb](./cookbooks/5_area_location.ipynb) | 画像または動画内の指定領域を点で識別し、マークします。 |
-| ローカライゼーション | [6_affordance_location.ipynb](./cookbooks/6_affordance_location.ipynb) | 画像または動画内で特定のアフォーダンスを持つ領域または物体を見つけます。 |
-| ローカライゼーション | [7_trajectory_location.ipynb](./cookbooks/7_trajectory_location.ipynb) | 画像または動画内の軌跡や動作経路を推定し、注釈付けします。 |
-| ローカライゼーション | [8_grasp_pose.ipynb](./cookbooks/8_grasp_pose.ipynb) | 画像からロボットの把持姿勢を予測するモデルの能力を示します。 |
-| 推論 | [9_thinking_with_time_space.ipynb](./cookbooks/9_thinking_with_time_space.ipynb) | テキスト推論と空間的グラウンディングを交互に行うインターリーブ推論メカニズムを探ります。 |
+| 認知 | [01_spatial_understanding.ipynb](./cookbooks/01_spatial_understanding.ipynb) | 動画シーンにおける空間理解能力を示します。 |
+| 認知 | [02_object_understanding.ipynb](./cookbooks/02_object_understanding.ipynb) | 物体カテゴリ、属性、関係、カウント能力をモデルがどのように理解するかを示します。 |
+| 認知 | [03_ocr.ipynb](./cookbooks/03_ocr.ipynb) | 動画内の光学文字認識とテキスト理解の例です。 |
+| ローカライゼーション | [04_object_location.ipynb](./cookbooks/04_object_location.ipynb) | 指示に基づき、画像または動画内の特定物体をバウンディングボックスで特定します。 |
+| ローカライゼーション | [05_area_location.ipynb](./cookbooks/05_area_location.ipynb) | 画像または動画内の指定領域を点で識別し、マークします。 |
+| ローカライゼーション | [06_affordance_location.ipynb](./cookbooks/06_affordance_location.ipynb) | 画像または動画内で特定のアフォーダンスを持つ領域または物体を見つけます。 |
+| ローカライゼーション | [07_trajectory_location.ipynb](./cookbooks/07_trajectory_location.ipynb) | 画像または動画内の軌跡や動作経路を推定し、注釈付けします。 |
+| ローカライゼーション | [08_grasp_pose.ipynb](./cookbooks/08_grasp_pose.ipynb) | 画像からロボットの把持姿勢を予測するモデルの能力を示します。 |
+| 推論 | [09_thinking_with_time_space.ipynb](./cookbooks/09_thinking_with_time_space.ipynb) | テキスト推論と空間的グラウンディングを交互に行うインターリーブ推論メカニズムを探ります。 |
 | 計画 | [10_manipulate_planning.ipynb](./cookbooks/10_manipulate_planning.ipynb) | 目標とシーンから複数ステップのタスク分解と行動計画を行います。 |
 | 計画 | [11_visual_language_navigation.ipynb](./cookbooks/11_visual_language_navigation.ipynb) | 視覚と言語指示を組み合わせ、ナビゲーションと経路計画を行います。 |
 

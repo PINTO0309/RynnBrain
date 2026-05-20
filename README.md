@@ -228,15 +228,15 @@ Checkout the [cookbooks](./cookbooks) that showcase RynnBrain's capabilities in 
 
 | Category             | Cookbook name                                                                                   | Description |
 |----------------------|--------------------------------------------------------------------------------------------------|-------------|
-| Cognition            | [1_spatial_understanding.ipynb](./cookbooks/1_spatial_understanding.ipynb)                     | Shows the model's ability for spatial understanding in the video scene. |
-| Cognition            | [2_object_understanding.ipynb](./cookbooks/2_object_understanding.ipynb)                       | Shows how the model understands object categories, attributes, and relations and counting ability. |
-| Cognition            | [3_ocr.ipynb](./cookbooks/3_ocr.ipynb)                                                         | Examples of optical character recognition and text understanding in videos. |
-| Location             | [4_object_location.ipynb](./cookbooks/4_object_location.ipynb)                                 | Locates specific objects with bounding boxes in an image or video based on instructions. |
-| Location             | [5_area_location.ipynb](./cookbooks/5_area_location.ipynb)                                     | Identifies and marks specified regions by points in an image or video. |
-| Location             | [6_affordance_location.ipynb](./cookbooks/6_affordance_location.ipynb)                         | Finds areas or objects with specific affordances in an image or video. |
-| Location             | [7_trajectory_location.ipynb](./cookbooks/7_trajectory_location.ipynb)                         | Infers and annotates trajectories or motion paths in an image or video. |
-| Location             | [8_grasp_pose.ipynb](./cookbooks/8_grasp_pose.ipynb)                                           | Presents the model's ability to predict robotic grasp poses from images. |
-| Reasoning            | [9_thinking_with_time_space.ipynb](./cookbooks/9_thinking_with_time_space.ipynb)               | Explores an interleaved reasoning mechanism that alternates between textual reasoning and spatial grounding. |
+| Cognition            | [01_spatial_understanding.ipynb](./cookbooks/01_spatial_understanding.ipynb)                   | Shows the model's ability for spatial understanding in the video scene. |
+| Cognition            | [02_object_understanding.ipynb](./cookbooks/02_object_understanding.ipynb)                     | Shows how the model understands object categories, attributes, and relations and counting ability. |
+| Cognition            | [03_ocr.ipynb](./cookbooks/03_ocr.ipynb)                                                       | Examples of optical character recognition and text understanding in videos. |
+| Location             | [04_object_location.ipynb](./cookbooks/04_object_location.ipynb)                               | Locates specific objects with bounding boxes in an image or video based on instructions. |
+| Location             | [05_area_location.ipynb](./cookbooks/05_area_location.ipynb)                                   | Identifies and marks specified regions by points in an image or video. |
+| Location             | [06_affordance_location.ipynb](./cookbooks/06_affordance_location.ipynb)                       | Finds areas or objects with specific affordances in an image or video. |
+| Location             | [07_trajectory_location.ipynb](./cookbooks/07_trajectory_location.ipynb)                       | Infers and annotates trajectories or motion paths in an image or video. |
+| Location             | [08_grasp_pose.ipynb](./cookbooks/08_grasp_pose.ipynb)                                         | Presents the model's ability to predict robotic grasp poses from images. |
+| Reasoning            | [09_thinking_with_time_space.ipynb](./cookbooks/09_thinking_with_time_space.ipynb)             | Explores an interleaved reasoning mechanism that alternates between textual reasoning and spatial grounding. |
 | Planning | [10_manipulate_planning.ipynb](./cookbooks/10_manipulate_planning.ipynb)                                     | Performs multi-step task decomposition and action planning from goals and scenes. |
 | Planning | [11_visual_language_navigation.ipynb](./cookbooks/11_visual_language_navigation.ipynb)         | Combines vision and language instructions to perform navigation and path planning. |
 
