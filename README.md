@@ -5,51 +5,51 @@
 <img src="./cookbooks/assets/logo.png" style="width: 50%; height: auto;">
 </p>
 <p align="center">
-       💫 <a href="https://alibaba-damo-academy.github.io/RynnBrain.github.io/"><b>Project Page</b></a>&nbsp;&nbsp; | &nbsp;&nbsp; 🤗 <a href ="https://huggingface.co/collections/Alibaba-DAMO-Academy/rynnbrain"><b> Hugging Face </b></a> &nbsp;&nbsp; | &nbsp;&nbsp; 🤖 <a href = "https://www.modelscope.cn/collections/DAMO_Academy/RynnBrain"><b> ModelScope</b></a>  &nbsp;|&nbsp; 🚀 <a href="https://huggingface.co/spaces/Alibaba-DAMO-Academy/RynnBrain"><b>Demo</b></a> &nbsp;&nbsp; | &nbsp;&nbsp;📚 <a href="https://github.com/alibaba-damo-academy/RynnBrain/tree/main/cookbooks">Cookbooks</a>&nbsp;&nbsp; | &nbsp;&nbsp; 📄 <a href="https://arxiv.org/abs/2602.14979v1">arXiv</a>&nbsp;&nbsp;
+       💫 <a href="https://alibaba-damo-academy.github.io/RynnBrain.github.io/"><b>プロジェクトページ</b></a>&nbsp;&nbsp; | &nbsp;&nbsp; 🤗 <a href ="https://huggingface.co/collections/Alibaba-DAMO-Academy/rynnbrain"><b> Hugging Face </b></a> &nbsp;&nbsp; | &nbsp;&nbsp; 🤖 <a href = "https://www.modelscope.cn/collections/DAMO_Academy/RynnBrain"><b> ModelScope</b></a>  &nbsp;|&nbsp; 🚀 <a href="https://huggingface.co/spaces/Alibaba-DAMO-Academy/RynnBrain"><b>デモ</b></a> &nbsp;&nbsp; | &nbsp;&nbsp;📚 <a href="https://github.com/alibaba-damo-academy/RynnBrain/tree/main/cookbooks">Cookbooks</a>&nbsp;&nbsp; | &nbsp;&nbsp; 📄 <a href="https://arxiv.org/abs/2602.14979v1">arXiv</a>&nbsp;&nbsp;
 
 </p>
 
 
-## 📰 News
-* **[2026.04.13]**  🔥🔥 Launch the brand-new <a href="https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-4B">RynnBrain-4B </a> !!
-* **[2026.02.17]**  🔥🔥 Release our Technical Report on <a href="https://arxiv.org/abs/2602.14979v1">arXiv </a> !!
-* **[2026.02.15]**  🔥🔥 Release our <a href="https://alibaba-damo-academy.github.io/RynnBrain.github.io/assets/RynnBrain_Report.pdf">Technical Report</a> !!
-* **[2026.02.09]**  🔥🔥 Release our code and model checkpoints!!
+## 📰 ニュース
+* **[2026.04.13]**  🔥🔥 新しい <a href="https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-4B">RynnBrain-4B </a> を公開しました!!
+* **[2026.02.17]**  🔥🔥 <a href="https://arxiv.org/abs/2602.14979v1">arXiv </a> でテクニカルレポートを公開しました!!
+* **[2026.02.15]**  🔥🔥 <a href="https://alibaba-damo-academy.github.io/RynnBrain.github.io/assets/RynnBrain_Report.pdf">テクニカルレポート</a>を公開しました!!
+* **[2026.02.09]**  🔥🔥 コードとモデルチェックポイントを公開しました!!
 
 
 
-## Introduction
-We present **RynnBrain**, an embodied foundation model grounded in physical reality. RynnBrain is available in three dense variants (2B, 4B, and 8B) and one mixture-of-experts (MoE) model (30B-A3B). 
-In addition, we release three post‑trained models: RynnBrain‑Plan (**robot task planning**), RynnBrain‑Nav (**vision-language navigation**), and RynnBrain‑CoP (**chain-of-point reasoning**). 
-<!-- RynnBrain‑Plan demonstrates the effectiveness of the fine‑grained manipulation‑planning paradigm that alternates between textual reasoning and localization. -->
-<!-- RynnBrain‑Nav verifies that using RynnBrain as the foundation model can substantially enhance the performance ceiling of various embodied task models.  -->
+## はじめに
+**RynnBrain** は、物理世界に根ざした embodied foundation model です。RynnBrain には、3 種類の Dense モデル（2B、4B、8B）と、1 種類の mixture-of-experts（MoE）モデル（30B-A3B）があります。
+さらに、ポストトレーニング済みモデルとして、RynnBrain-Plan（**ロボットタスク計画**）、RynnBrain-Nav（**視覚言語ナビゲーション**）、RynnBrain-CoP（**chain-of-point reasoning**）の 3 種類を公開しています。
+<!-- RynnBrain-Plan demonstrates the effectiveness of the fine-grained manipulation-planning paradigm that alternates between textual reasoning and localization. -->
+<!-- RynnBrain-Nav verifies that using RynnBrain as the foundation model can substantially enhance the performance ceiling of various embodied task models.  -->
 <!-- Brain-CoP incorporates an interleaved reasoning mechanism that alternates between textual reasoning and spatial grounding, endowing it with physical-space reasoning capabilities.  -->
 
-### 🌟 Key Highlights
-* **Comprehensive egocentric understanding**: 
-Excels in fine-grained video understanding and egocentric cognition, covering tasks such as embodied QA, counting, and OCR.
-* **Diverse spatio-temporal localization**: 
-Possesses powerful localization capabilities across episodic memory, enabling precise identification of objects, target areas, and motion trajectories.
-* **Physical-space reasoning**: 
-Employs an interleaved reasoning strategy that alternates between textual and spatial grounding, ensuring that its reasoning processes are firmly rooted in the physical environment.
-* **Physics-aware precise planning**: 
-Integrates located affordances and object information into planning, enabling downstream VLA models to execute intricate tasks with fine-grained instructions.
+### 🌟 主な特長
+* **包括的な一人称視点理解**:
+細粒度の動画理解と一人称視点での認知に優れており、embodied QA、カウント、OCR などのタスクをカバーします。
+* **多様な時空間ローカライゼーション**:
+エピソード記憶全体にわたる強力なローカライゼーション能力を備え、物体、対象領域、動作軌跡を正確に特定できます。
+* **物理空間推論**:
+テキスト推論と空間的グラウンディングを交互に行うインターリーブ推論戦略により、推論プロセスを物理環境にしっかりと根ざしたものにします。
+* **物理を考慮した精密な計画**:
+ローカライズされたアフォーダンスと物体情報を計画に統合し、下流の VLA モデルが細粒度の指示に基づいて複雑なタスクを実行できるようにします。
 
 <p align="center">
 <img src="./cookbooks/assets/intro.png" style="width: 90%; height: auto;">
 </p>
 
-### Model Architecture
-RynnBrain employs a unified architecture (supporting both Dense and MoE variants) to transform omni-vision inputs and textual instructions into multi-modal outputs, including spatial trajectories, physical pointing, and action planning. 
-Through massive training on rich spatio-temporal, physical-space, and general knowledge data, RynnBrain maintains robust general-purpose capabilities while specializing in diverse, fine-grained embodied reasoning and complex planning tasks.
+### モデルアーキテクチャ
+RynnBrain は、Dense と MoE の両方のバリアントをサポートする統一アーキテクチャを採用し、omni-vision 入力とテキスト指示を、空間軌跡、物理的ポインティング、行動計画などのマルチモーダル出力へ変換します。
+豊富な時空間データ、物理空間データ、一般知識データを用いた大規模学習により、RynnBrain は汎用能力を堅牢に維持しながら、多様で細粒度な embodied reasoning と複雑な計画タスクに特化しています。
 
 <p align="center">
 <img src="./cookbooks/assets/framework.png" style="width: 90%; height: auto;">
 </p>
 
-## Performance
+## 性能
 
-- General Embodied Understanding
+- 汎用 Embodied Understanding
 
 <p align="center">
 <img src="./cookbooks/assets/performance_general_2B_8B.png" style="width: 80%; height: auto;">
@@ -59,14 +59,14 @@ Through massive training on rich spatio-temporal, physical-space, and general kn
 </p>
 
 
-- Robot Task Planning
+- ロボットタスク計画
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/ce0b20c2-81be-403c-bd5f-19bbe5235dd2" style="width: 80%; height: auto;">
 </p>
 
 
-- Vision-Language Navigation
+- 視覚言語ナビゲーション
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/78c36b4e-0ea8-42e2-a3fd-692d7c2fb4a7" style="width: 80%; height: auto;">
@@ -75,28 +75,31 @@ Through massive training on rich spatio-temporal, physical-space, and general kn
 
 ## Model Zoo
 
-| Model            | Base Model           | HuggingFace | ModelScope |
+| モデル | ベースモデル | HuggingFace | ModelScope |
 | :--------------- | :------------------- | :---------: | :--------: |
 | RynnBrain-2B  | Qwen3-VL-2B-Instruct | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-2B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-2B)   |
 | RynnBrain-4B  | Qwen3-VL-4B-Instruct | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-4B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-4B)   |
 | RynnBrain-8B  | Qwen3-VL-8B-Instruct | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-8B)   |
 | RynnBrain-30B-A3B  | Qwen3-VL-30B-A3B-Instruct | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-30B-A3B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-30B-A3B)   |
-| RynnBrain‑CoP-8B | RynnBrain-8B         | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-CoP-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-CoP-8B)   |
-| RynnBrain‑Plan-8B | RynnBrain-8B        | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Plan-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-Plan-8B)   |
-| RynnBrain‑Plan-30B-A3B | RynnBrain-30B-A3B        | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Plan-30B-A3B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-Plan-30B-A3B)   |
-| RynnBrain‑Nav-8B | RynnBrain-8B        | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Nav-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-Nav-8B)   |
+| RynnBrain-CoP-8B | RynnBrain-8B         | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-CoP-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-CoP-8B)   |
+| RynnBrain-Plan-8B | RynnBrain-8B        | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Plan-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-Plan-8B)   |
+| RynnBrain-Plan-30B-A3B | RynnBrain-30B-A3B        | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Plan-30B-A3B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-Plan-30B-A3B)   |
+| RynnBrain-Nav-8B | RynnBrain-8B        | [Link](https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Nav-8B)    | [Link](https://www.modelscope.cn/models/DAMO_Academy/RynnBrain-Nav-8B)   |
 
 
 
-## Quick Start
+## クイックスタート
 
-### Inference with 🤗transformers
+### 🤗transformers による推論
 
-**Minimal dependencies**
+**最小依存関係**
 ```shell
-pip install transformers==4.57.1
+uv python install 3.12.12
+uv venv -p 3.12.12 .venv
+source .venv/bin/activate
+uv sync
 ```
-**Run text generation**
+**テキスト生成の実行**
 ```python
 import torch
 from transformers import AutoModelForImageTextToText, AutoProcessor
@@ -139,11 +142,11 @@ print(response)
 
 
 
-### Inference with SGLang
+### SGLang による推論
 
-For installation and advanced usages, please refer to the official [documentation](https://docs.sglang.io).
+インストール方法や高度な使い方については、公式[ドキュメント](https://docs.sglang.io)を参照してください。
 
-**OpenAI-Compatible Serving**
+**OpenAI 互換サービング**
 ```shell
 # launch server
 python3 -m sglang.launch_server --model-path Alibaba-DAMO-Academy/RynnBrain-2B --host 0.0.0.0 --port 8000
@@ -183,7 +186,7 @@ response = client.chat.completions.create(
 print(response)
 ```
 
-**Offline Engine**
+**オフラインエンジン**
 ```python
 import sglang as sgl
 from transformers import AutoProcessor
@@ -223,56 +226,54 @@ if __name__ == '__main__':
 
 
 ## Cookbooks
-Checkout the [cookbooks](./cookbooks) that showcase RynnBrain's capabilities in cognition, localization, reasoning, and planning.
+RynnBrain の認知、ローカライゼーション、推論、計画の能力を示す [cookbooks](./cookbooks) を確認してください。
 
 
-| Category             | Cookbook name                                                                                   | Description |
+| カテゴリ | Cookbook 名 | 説明 |
 |----------------------|--------------------------------------------------------------------------------------------------|-------------|
-| Cognition            | [01_spatial_understanding.ipynb](./cookbooks/01_spatial_understanding.ipynb)                   | Shows the model's ability for spatial understanding in the video scene. |
-| Cognition            | [02_object_understanding.ipynb](./cookbooks/02_object_understanding.ipynb)                     | Shows how the model understands object categories, attributes, and relations and counting ability. |
-| Cognition            | [03_ocr.ipynb](./cookbooks/03_ocr.ipynb)                                                       | Examples of optical character recognition and text understanding in videos. |
-| Location             | [04_object_location.ipynb](./cookbooks/04_object_location.ipynb)                               | Locates specific objects with bounding boxes in an image or video based on instructions. |
-| Location             | [05_area_location.ipynb](./cookbooks/05_area_location.ipynb)                                   | Identifies and marks specified regions by points in an image or video. |
-| Location             | [06_affordance_location.ipynb](./cookbooks/06_affordance_location.ipynb)                       | Finds areas or objects with specific affordances in an image or video. |
-| Location             | [07_trajectory_location.ipynb](./cookbooks/07_trajectory_location.ipynb)                       | Infers and annotates trajectories or motion paths in an image or video. |
-| Location             | [08_grasp_pose.ipynb](./cookbooks/08_grasp_pose.ipynb)                                         | Presents the model's ability to predict robotic grasp poses from images. |
-| Reasoning            | [09_thinking_with_time_space.ipynb](./cookbooks/09_thinking_with_time_space.ipynb)             | Explores an interleaved reasoning mechanism that alternates between textual reasoning and spatial grounding. |
-| Planning | [10_manipulate_planning.ipynb](./cookbooks/10_manipulate_planning.ipynb)                                     | Performs multi-step task decomposition and action planning from goals and scenes. |
-| Planning | [11_visual_language_navigation.ipynb](./cookbooks/11_visual_language_navigation.ipynb)         | Combines vision and language instructions to perform navigation and path planning. |
+| 認知 | [21_spatial_understanding_jp.ipynb](./cookbooks/21_spatial_understanding_jp.ipynb) | 動画シーンにおける空間理解能力を示します。 |
+| 認知 | [22_object_understanding_jp.ipynb](./cookbooks/22_object_understanding_jp.ipynb) | 物体カテゴリ、属性、関係、カウント能力をモデルがどのように理解するかを示します。 |
+| 認知 | [23_ocr_jp.ipynb](./cookbooks/23_ocr_jp.ipynb) | 動画内の光学文字認識とテキスト理解の例です。 |
+| ローカライゼーション | [24_object_location_jp.ipynb](./cookbooks/24_object_location_jp.ipynb) | 指示に基づき、画像または動画内の特定物体をバウンディングボックスで特定します。 |
+| ローカライゼーション | [25_area_location_jp.ipynb](./cookbooks/25_area_location_jp.ipynb) | 画像または動画内の指定領域を点で識別し、マークします。 |
+| ローカライゼーション | [26_affordance_location_jp.ipynb](./cookbooks/26_affordance_location_jp.ipynb) | 画像または動画内で特定のアフォーダンスを持つ領域または物体を見つけます。 |
+| ローカライゼーション | [27_trajectory_location_jp.ipynb](./cookbooks/27_trajectory_location_jp.ipynb) | 画像または動画内の軌跡や動作経路を推定し、注釈付けします。 |
+| ローカライゼーション | [28_grasp_pose_jp.ipynb](./cookbooks/28_grasp_pose_jp.ipynb) | 画像からロボットの把持姿勢を予測するモデルの能力を示します。 |
+| 推論 | [29_thinking_with_time_space_jp.ipynb](./cookbooks/29_thinking_with_time_space_jp.ipynb) | テキスト推論と空間的グラウンディングを交互に行うインターリーブ推論メカニズムを探ります。 |
+| 計画 | [30_manipulate_planning_jp.ipynb](./cookbooks/30_manipulate_planning_jp.ipynb) | 目標とシーンから複数ステップのタスク分解と行動計画を行います。 |
+| 計画 | [31_visual_language_navigation_jp.ipynb](./cookbooks/31_visual_language_navigation_jp.ipynb) | 視覚と言語指示を組み合わせ、ナビゲーションと経路計画を行います。 |
 
 
-## Training
+## トレーニング
 
-**Pretraining & Evaluation** 
+**事前学習と評価**
 
-Please refer to [RynnScale](https://github.com/alibaba-damo-academy/RynnScale/tree/main/projects/rynn_brain) for details of pretraining and evaluation.
+事前学習と評価の詳細については、[RynnScale](https://github.com/alibaba-damo-academy/RynnScale/tree/main/projects/rynn_brain) を参照してください。
 
 
-**Finetuning**
+**ファインチューニング**
 
-- [Reasoning](reasoning): RynnBrain introduces an **interleaved reasoning approach that combines grounding with textual information** directly within egocentric video streams. This paradigm effectively bridges the cognitive gap between language and the physical world, ensuring the reasoning process is robustly anchored
-in reality. 
+- [Reasoning](reasoning): RynnBrain は、一人称視点動画ストリーム内で **grounding とテキスト情報を直接組み合わせるインターリーブ推論アプローチ**を導入しています。このパラダイムは、言語と物理世界の間にある認知的な隔たりを効果的に橋渡しし、推論プロセスが現実にしっかりと基づくようにします。
 
 - [Navigation](navigation):
-We trained a vision-language navigation model based on the RynnBrain base model. Empirical evaluation demonstrates that fine-tuning the vision-language model on RynnBrain yields superior performance compared to fine-tuning on other foundational models.
+RynnBrain ベースモデルを基盤とする視覚言語ナビゲーションモデルを学習しました。実証評価では、RynnBrain 上で視覚言語モデルをファインチューニングすることで、他の基盤モデル上でファインチューニングする場合よりも優れた性能が得られることを示しています。
 
 - [Planning](planning):
-RynnBrain **integrates the location information of affordance, areas, and objects directly
-into its planning outputs**. Consequently, even highly intricate and fine-grained tasks can be effectively addressed within our hierarchical RynnBrain-VLA system architecture.
+RynnBrain は、**アフォーダンス、領域、物体の位置情報を計画出力に直接統合**します。その結果、非常に複雑で細粒度なタスクであっても、階層型の RynnBrain-VLA システムアーキテクチャ内で効果的に扱うことができます。
 
 
 ## RynnBrain-Bench
-We introduce **RynnBrain-Bench**, a high-dimensional benchmark for embodied understanding that evaluates models across four key dimensions: *object cognition*, *spatial cognition*, *grounding*, and *pointing*—highlighting fine-grained understanding and spatiotemporal localization across episodic video sequences.
+**RynnBrain-Bench** は、embodied understanding のための高次元ベンチマークです。モデルを *物体認知*、*空間認知*、*グラウンディング*、*ポインティング* という 4 つの主要次元で評価し、エピソード動画系列における細粒度理解と時空間ローカライゼーションを重視しています。
 
-For details, please refer to [RynnBrain-Bench](./rynnbrain-bench/README.md).
+詳細については、[RynnBrain-Bench](./rynnbrain-bench/README.md) を参照してください。
 <p align="center">
 <img src="./cookbooks/assets/RynnBrain-Bench.png" style="width: 80%; height: auto;">
 </p>
 
 
-## 📑 Citation
+## 📑 引用
 
-If you find RynnBrain useful for your research and applications, please cite using this BibTeX:
+RynnBrain が研究やアプリケーションに役立つ場合は、以下の BibTeX で引用してください。
 
 ```bibtex
 @article{damo2026rynnbrain,
@@ -285,13 +286,13 @@ If you find RynnBrain useful for your research and applications, please cite usi
 
 ```
 
-<details open><summary>💡 Some other multimodal-LLM projects from our team may interest you ✨. </summary><p>
+<details open><summary>💡 私たちのチームによる他の multimodal-LLM プロジェクトにも関心を持っていただけるかもしれません ✨。 </summary><p>
 <!--  may -->
-       
+
 > [**RynnEC: Bringing MLLMs into Embodied World**](https://github.com/alibaba-damo-academy/RynnEC) <br>
 > Ronghao Dang*, Yuqian Yuan*, Yunxuan Mao*, Kehan Li*, Jiangpin Liu, Zhikai Wang, Fan Wang, Deli Zhao, Xin Li <br>
 [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/alibaba-damo-academy/RynnEC)  [![github](https://img.shields.io/github/stars/alibaba-damo-academy/RynnEC.svg?style=social)](https://github.com/alibaba-damo-academy/RynnEC) [![arXiv](https://img.shields.io/badge/Arxiv-2508.14160-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2508.14160) <br>
-       
+
 > [**RynnScale**](https://github.com/alibaba-damo-academy/RynnScale) <br>
 > RynnScale Team <br>
 [![github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/alibaba-damo-academy/RynnScale)  [![github](https://img.shields.io/github/stars/alibaba-damo-academy/RynnScale.svg?style=social)](https://github.com/alibaba-damo-academy/RynnScale) <br>
@@ -314,10 +315,10 @@ If you find RynnBrain useful for your research and applications, please cite usi
 
 </p></details>
 
-## Acknowledgement
+## 謝辞
 
-Our RynnBrain is built on top of [**Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL). We also learned a lot from the implementation of [**RynnEC**](https://github.com/alibaba-damo-academy/RynnEC) and [**VideoRefer**](https://github.com/DAMO-NLP-SG/VideoRefer). If your work is used in RynnBrain but not mentioned in either this repo or the technical report, feel free to let us know :heart:.
+RynnBrain は [**Qwen3-VL**](https://github.com/QwenLM/Qwen3-VL) を基盤として構築されています。また、[**RynnEC**](https://github.com/alibaba-damo-academy/RynnEC) と [**VideoRefer**](https://github.com/DAMO-NLP-SG/VideoRefer) の実装からも多くを学びました。あなたの成果が RynnBrain で利用されているにもかかわらず、このリポジトリまたはテクニカルレポートで言及されていない場合は、お知らせください :heart:。
 
-## License
+## ライセンス
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+このプロジェクトは Apache License 2.0 の下でライセンスされています。詳細については [LICENSE](LICENSE) ファイルを参照してください。
