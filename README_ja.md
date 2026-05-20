@@ -94,7 +94,10 @@ RynnBrain は、Dense と MoE の両方のバリアントをサポートする�
 
 **最小依存関係**
 ```shell
-pip install transformers==4.57.1
+uv python install 3.12.12
+uv venv -p 3.12.12 .venv
+source .venv/bin/activate
+uv sync
 ```
 **テキスト生成の実行**
 ```python
