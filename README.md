@@ -1,4 +1,6 @@
 # RynnBrain
+[English](./README.md) | [日本語](./README_ja.md)
+
 <p align="center">
 <img src="./cookbooks/assets/logo.png" style="width: 50%; height: auto;">
 </p>
