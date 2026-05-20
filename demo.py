@@ -1,5 +1,6 @@
 import ffmpeg
 import gradio as gr
+import cv2
 import numpy as np
 import re
 import torch
@@ -171,20 +172,59 @@ def add_point_prompt(frames, frame_idx, prompt_type, points, text):
 def on_video_upload(video):
     probe = ffmpeg.probe(video)
     video_stream = next((stream for stream in probe["streams"] if stream["codec_type"] == "video"), None)
+    if video_stream is None:
+        raise gr.Error(f"No video stream found in: {video}")
+
     width = int(video_stream["width"])
     height = int(video_stream["height"])
+    duration = float(video_stream.get("duration") or probe.get("format", {}).get("duration") or 0)
+    sample_fps = min(FPS, MAX_FRAMES / duration) if duration > 0 else FPS
 
-    out, _ = (
-        ffmpeg
-        .input(video)
-        .filter("fps", fps=FPS)
-        .output("pipe:", format="rawvideo", pix_fmt="rgb24")
-        .run(capture_stdout=True, capture_stderr=True)
-    )
-
-    video_array = np.frombuffer(out, np.uint8).reshape([-1, height, width, 3])
+    try:
+        out, _ = (
+            ffmpeg
+            .input(video, threads=1)
+            .filter("fps", fps=sample_fps)
+            .output("pipe:", format="rawvideo", pix_fmt="rgb24", vframes=MAX_FRAMES)
+            .global_args("-hide_banner", "-loglevel", "error", "-nostdin")
+            .run(capture_stdout=True, capture_stderr=True)
+        )
+        frame_size = height * width * 3
+        if len(out) < frame_size or len(out) % frame_size != 0:
+            raise RuntimeError(f"Unexpected decoded video byte size: {len(out)}")
+        video_array = np.frombuffer(out, np.uint8).reshape([-1, height, width, 3])
+    except Exception as exc:
+        video_array = _read_video_with_opencv(video, sample_fps)
+        if len(video_array) == 0:
+            raise gr.Error(f"Failed to decode video: {exc}")
 
     return (video_array, gr.update(value=0, maximum=len(video_array) - 1, interactive=True), False, *on_frame_idx_change(video_array, 0))
+
+
+def _read_video_with_opencv(video, sample_fps):
+    cap = cv2.VideoCapture(video)
+    if not cap.isOpened():
+        return np.empty((0, 0, 0, 3), dtype=np.uint8)
+
+    src_fps = cap.get(cv2.CAP_PROP_FPS) or sample_fps
+    step = max(1, round(src_fps / sample_fps)) if sample_fps > 0 else 1
+    frames = []
+    idx = 0
+
+    try:
+        while len(frames) < MAX_FRAMES:
+            ok, frame_bgr = cap.read()
+            if not ok:
+                break
+            if idx % step == 0:
+                frames.append(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB))
+            idx += 1
+    finally:
+        cap.release()
+
+    if not frames:
+        return np.empty((0, 0, 0, 3), dtype=np.uint8)
+    return np.stack(frames, axis=0)
 
 
 def visualize_point_prompts(frames, text):
