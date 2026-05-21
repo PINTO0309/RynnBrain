@@ -1,0 +1,38 @@
+{
+  "name": "rynnbrain-cognition-electron",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "main": "dist-electron/main/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"pnpm dev:electron\"",
+    "dev:electron": "wait-on http://127.0.0.1:5173 && tsc -p tsconfig.electron.json && env -u ELECTRON_RUN_AS_NODE electron .",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit",
+    "build": "tsc --noEmit && vite build && tsc -p tsconfig.electron.json"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.9.0",
+    "@types/react": "18.3.17",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.3.4",
+    "concurrently": "9.1.0",
+    "electron": "39.8.10",
+    "typescript": "5.7.2",
+    "vite": "6.4.2",
+    "wait-on": "8.0.1"
+  },
+  "overrides": {
+    "axios": "1.16.1",
+    "electron": "39.8.10",
+    "esbuild": "0.25.12",
+    "vite": "6.4.2"
+  }
+}

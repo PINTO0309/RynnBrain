@@ -1,0 +1,13 @@
+packages:
+  - .
+
+minimumReleaseAge: 10080
+minimumReleaseAgeStrict: true
+minimumReleaseAgeIgnoreMissingTime: false
+engineStrict: true
+strictDepBuilds: true
+blockExoticSubdeps: true
+onlyBuiltDependencies:
+  - electron
+  - esbuild
+  - fsevents

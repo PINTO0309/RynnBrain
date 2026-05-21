@@ -5,3 +5,8 @@ __pycache__
 dist
 navigation/data
 movies/
+
+# Node / Electron
+node_modules/
+apps/cognition-electron/dist/
+apps/cognition-electron/dist-electron/

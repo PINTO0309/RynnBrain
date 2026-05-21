@@ -99,6 +99,34 @@ uv venv -p 3.12.12 .venv
 source .venv/bin/activate
 uv sync
 ```
+
+### Electron GUIで Cognition タスクを試す
+
+動画をアップロードして、デスクトップGUI上で空間理解などの Cognition タスクを試せます。Electron がローカル FastAPI バックエンドを起動し、推論後は、指示とモデル出力、および `<object>` / `<area>` / `<affordance>` / `<trajectory>` 形式の座標出力を動画上に重ねたプレビューを生成します。
+
+インストールには `npm` ではなく `pnpm` を使用してください。この GUI では `pnpm-workspace.yaml` で `minimumReleaseAge: 10080` を設定しており、公開から7日以上経過していない npm パッケージはインストールされません。
+
+```shell
+corepack enable
+corepack prepare pnpm@10.33.0 --activate
+cd apps/cognition-electron
+pnpm install --frozen-lockfile
+```
+
+起動:
+
+```shell
+pnpm run dev
+```
+
+デフォルトモデルは `RynnBrain-2B`、プロンプトに渡す画像枚数は `5` です。GPU環境では、GUI上にVRAM使用量と1推論あたりの preprocess / generation / postprocess / total の処理時間が表示されます。
+
+Gradio 版を直接起動する場合は、以下も利用できます。
+
+```shell
+uv run python cookbooks/cognition_gui.py --host 0.0.0.0 --port 8061
+```
+
 **テキスト生成の実行**
 ```python
 import torch
